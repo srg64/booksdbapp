@@ -1,0 +1,81 @@
+[{
+	"Id": 1970,
+	"Name": "Name 1",
+	"Version": "/Date(1221414709000)/",
+	"__metadata": {
+		"uri": "Publishers(1970)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 8402,
+	"Name": "Name 2",
+	"Version": "/Date(1476553909000)/",
+	"__metadata": {
+		"uri": "Publishers(8402)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 6408,
+	"Name": "Name 3",
+	"Version": "/Date(979239109000)/",
+	"__metadata": {
+		"uri": "Publishers(6408)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 342,
+	"Name": "Name 4",
+	"Version": "/Date(1383504709000)/",
+	"__metadata": {
+		"uri": "Publishers(342)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 6177,
+	"Name": "Name 5",
+	"Version": "/Date(1432749109000)/",
+	"__metadata": {
+		"uri": "Publishers(6177)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 938,
+	"Name": "Name 6",
+	"Version": "/Date(1120672309000)/",
+	"__metadata": {
+		"uri": "Publishers(938)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 2073,
+	"Name": "Name 7",
+	"Version": "/Date(1083952309000)/",
+	"__metadata": {
+		"uri": "Publishers(2073)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 2328,
+	"Name": "Name 8",
+	"Version": "/Date(1093369909000)/",
+	"__metadata": {
+		"uri": "Publishers(2328)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 3335,
+	"Name": "Name 9",
+	"Version": "/Date(1436377909000)/",
+	"__metadata": {
+		"uri": "Publishers(3335)",
+		"type": "BooksDB.Publisher"
+	}
+}, {
+	"Id": 675,
+	"Name": "Name 10",
+	"Version": "/Date(1306086709000)/",
+	"__metadata": {
+		"uri": "Publishers(675)",
+		"type": "BooksDB.Publisher"
+	}
+}]

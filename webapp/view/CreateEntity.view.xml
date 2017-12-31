@@ -1,0 +1,68 @@
+<mvc:View controllerName="de.asr.library.booksdbapp.controller.CreateEntity" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:smart="sap.ui.comp.smartfield" xmlns:ndc="sap.ndc" xmlns="sap.m">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" title="{viewModel>/viewTitle}" busy="{viewModel>/busy}">
+		<semantic:content>
+			<f:SimpleForm class="editableForm" columnsL="1" columnsM="1" editable="true" emptySpanL="4" emptySpanM="4" id="newEntitySimpleForm"
+				labelSpanL="3" labelSpanM="3" layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024"
+				title="{= ${viewModel>/mode} === 'edit'? ${i18n>CreateEntityFormTitleEditMode} : ${i18n>CreateEntityFormTitleCreateMode}}">
+				<f:content>
+					<Label text="{i18n>Books.LocationString}" id="LocationStringLabel_id" required="true"/>
+					<Input name="LocationString" id="LocationString_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true"
+						visible="true" value="{ path: 'LocationString', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Title}" id="TitleLabel_id" required="false"/>
+					<Input name="Title" id="Title_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'Title', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Subtitle}" id="SubtitleLabel_id" required="false"/>
+					<Input name="Subtitle" id="Subtitle_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'Subtitle', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.AuthorsString}" id="AuthorsStringLabel_id" required="false"/>
+					<Input name="AuthorsString" id="AuthorsString_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'AuthorsString', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Description}" id="DescriptionLabel_id" required="false"/>
+					<Input name="Description" id="Description_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'Description', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:10000 } }"/>
+					<Label text="{i18n>Books.ThumbnailUrl}" id="ThumbnailUrlLabel_id" required="false"/>
+					<Input name="ThumbnailUrl" id="ThumbnailUrl_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'ThumbnailUrl', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.SmallThumbnailUrl}" id="SmallThumbnailUrlLabel_id" required="false"/>
+					<Input name="SmallThumbnailUrl" id="SmallThumbnailUrl_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+					    value="{ path: 'SmallThumbnailUrl', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Isbn10}" id="Isbn10Label_id" required="false"/>
+					<Input name="Isbn10" id="Isbn10_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'Isbn10', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:10 } }"/>
+					<Label text="{i18n>Books.Isbn13}" id="Isbn13Label_id" required="false"/>
+					<Input name="Isbn13" id="Isbn13_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'Isbn13', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:13 } }"/>
+					<Label text="{i18n>Books.PageCount}" id="PageCountLabel_id" required="false"/>
+					<Input name="PageCount" id="PageCount_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'PageCount', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.PublishedDate}" id="PublishedDateLabel_id" required="false"/>
+					<Input name="PublishedDate" id="PublishedDate_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'PublishedDate', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.PublisherString}" id="PublisherStringLabel_id" required="false"/>
+					<Input name="PublisherString" id="PublisherString_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true"
+						visible="true" value="{ path: 'PublisherString', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.PrintType}" id="PrintTypeLabel_id" required="false"/>
+					<Input name="PrintType" id="PrintType_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'PrintType', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Rating}" id="RatingLabel_id" required="false"/>
+					<Input name="Rating" id="Rating_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'Rating', type: 'sap.ui.model.odata.type.String' }"/>
+				</f:content>
+			</f:SimpleForm>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<ndc:BarcodeScannerButton name="ScanIsbn13" id="ScanIsbn13_id" scanSuccess="onScanSuccess" scanFail="onScanFail" inputLiveUpdate="onScanInputLiveUpdate"/>		
+		</semantic:customFooterContent>
+		<semantic:saveAction>
+<!--
+			<semantic:SaveAction id="save" enabled="{viewModel>/enableCreate}" press="onSave"/>
+-->
+			<semantic:SaveAction id="save" enabled="true" press="onSave"/>
+		</semantic:saveAction>
+		<semantic:cancelAction>
+			<semantic:CancelAction id="cancel" press="onCancel"></semantic:CancelAction>
+		</semantic:cancelAction>
+	</semantic:DetailPage>
+</mvc:View>

@@ -1,0 +1,381 @@
+[{
+	"AuthorsString": "AuthorsString 1",
+	"Description": "Description 1",
+	"Id": 1324,
+	"Isbn10": "Isbn10 1",
+	"Isbn13": "Isbn13 1",
+	"LocationString": "LocationString 1",
+	"PageCount": "PageCount 1",
+	"PrintType": "PrintType 1",
+	"PublishedDate": "PublishedDate 1",
+	"PublisherString": "PublisherString 1",
+	"Rating": 2018,
+	"SmallThumbnail": "01110110100100010011101100110011",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 1",
+	"Subtitle": "Subtitle 1",
+	"Thumbnail": "01101110010111100010010010000011",
+	"ThumbnailUrl": "ThumbnailUrl 1",
+	"Title": "Title 1a",
+	"Version": "/Date(1255024303000)/",
+	"__metadata": {
+		"uri": "Books(1324L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(1324)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(1324)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(1324)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 2",
+	"Description": "Description 2",
+	"Id": 1855,
+	"Isbn10": "Isbn10 2",
+	"Isbn13": "Isbn13 2",
+	"LocationString": "LocationString 2",
+	"PageCount": "PageCount 2",
+	"PrintType": "PrintType 2",
+	"PublishedDate": "PublishedDate 2",
+	"PublisherString": "PublisherString 2",
+	"Rating": 3470,
+	"SmallThumbnail": "11000000110110011110110101000110",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 2",
+	"Subtitle": "Subtitle 2",
+	"Thumbnail": "11110000101100011011010011000101",
+	"ThumbnailUrl": "ThumbnailUrl 2",
+	"Title": "Title 2",
+	"Version": "/Date(1477939903000)/",
+	"__metadata": {
+		"uri": "Books(1855L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(1855)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(1855)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(1855)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 3",
+	"Description": "Description 3",
+	"Id": 7746,
+	"Isbn10": "Isbn10 3",
+	"Isbn13": "Isbn13 3",
+	"LocationString": "LocationString 3",
+	"PageCount": "PageCount 3",
+	"PrintType": "PrintType 3",
+	"PublishedDate": "PublishedDate 3",
+	"PublisherString": "PublisherString 3",
+	"Rating": 1057,
+	"SmallThumbnail": "00111110111110111110100100001000",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 3",
+	"Subtitle": "Subtitle 3",
+	"Thumbnail": "10011010001101111011011110100110",
+	"ThumbnailUrl": "ThumbnailUrl 3",
+	"Title": "Title 3",
+	"Version": "/Date(1493315503000)/",
+	"__metadata": {
+		"uri": "Books(7746L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(7746)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(7746)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(7746)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 4",
+	"Description": "Description 4",
+	"Id": 3520,
+	"Isbn10": "Isbn10 4",
+	"Isbn13": "Isbn13 4",
+	"LocationString": "LocationString 4",
+	"PageCount": "PageCount 4",
+	"PrintType": "PrintType 4",
+	"PublishedDate": "PublishedDate 4",
+	"PublisherString": "PublisherString 4",
+	"Rating": 1429,
+	"SmallThumbnail": "01100101011000100000010011011101",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 4",
+	"Subtitle": "Subtitle 4",
+	"Thumbnail": "01110011011001111111101010011101",
+	"ThumbnailUrl": "ThumbnailUrl 4",
+	"Title": "Title 4",
+	"Version": "/Date(1451587903000)/",
+	"__metadata": {
+		"uri": "Books(3520L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(3520)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(3520)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(3520)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 5",
+	"Description": "Description 5",
+	"Id": 7906,
+	"Isbn10": "Isbn10 5",
+	"Isbn13": "Isbn13 5",
+	"LocationString": "LocationString 5",
+	"PageCount": "PageCount 5",
+	"PrintType": "PrintType 5",
+	"PublishedDate": "PublishedDate 5",
+	"PublisherString": "PublisherString 5",
+	"Rating": 9390,
+	"SmallThumbnail": "01000001100000110000000011100010",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 5",
+	"Subtitle": "Subtitle 5",
+	"Thumbnail": "10000001111001101111001001101111",
+	"ThumbnailUrl": "ThumbnailUrl 5",
+	"Title": "Title 5",
+	"Version": "/Date(1446144703000)/",
+	"__metadata": {
+		"uri": "Books(7906L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(7906)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(7906)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(7906)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 6",
+	"Description": "Description 6",
+	"Id": 6811,
+	"Isbn10": "Isbn10 6",
+	"Isbn13": "Isbn13 6",
+	"LocationString": "LocationString 6",
+	"PageCount": "PageCount 6",
+	"PrintType": "PrintType 6",
+	"PublishedDate": "PublishedDate 6",
+	"PublisherString": "PublisherString 6",
+	"Rating": 9556,
+	"SmallThumbnail": "11011011101101001010011111111110",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 6",
+	"Subtitle": "Subtitle 6",
+	"Thumbnail": "10101000101001001000100110100011",
+	"ThumbnailUrl": "ThumbnailUrl 6",
+	"Title": "Title 6",
+	"Version": "/Date(1469814703000)/",
+	"__metadata": {
+		"uri": "Books(6811L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(6811)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(6811)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(6811)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 7",
+	"Description": "Description 7",
+	"Id": 5967,
+	"Isbn10": "Isbn10 7",
+	"Isbn13": "Isbn13 7",
+	"LocationString": "LocationString 7",
+	"PageCount": "PageCount 7",
+	"PrintType": "PrintType 7",
+	"PublishedDate": "PublishedDate 7",
+	"PublisherString": "PublisherString 7",
+	"Rating": 5348,
+	"SmallThumbnail": "01100110001111010001010111110000",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 7",
+	"Subtitle": "Subtitle 7",
+	"Thumbnail": "11011110011110111110000000010000",
+	"ThumbnailUrl": "ThumbnailUrl 7",
+	"Title": "Title 7",
+	"Version": "/Date(1077648703000)/",
+	"__metadata": {
+		"uri": "Books(5967L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(5967)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(5967)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(5967)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 8",
+	"Description": "Description 8",
+	"Id": 5974,
+	"Isbn10": "Isbn10 8",
+	"Isbn13": "Isbn13 8",
+	"LocationString": "LocationString 8",
+	"PageCount": "PageCount 8",
+	"PrintType": "PrintType 8",
+	"PublishedDate": "PublishedDate 8",
+	"PublisherString": "PublisherString 8",
+	"Rating": 7779,
+	"SmallThumbnail": "10100100100010100001001010101110",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 8",
+	"Subtitle": "Subtitle 8",
+	"Thumbnail": "10100010010111010101001011100000",
+	"ThumbnailUrl": "ThumbnailUrl 8",
+	"Title": "Title 8",
+	"Version": "/Date(984423103000)/",
+	"__metadata": {
+		"uri": "Books(5974L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(5974)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(5974)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(5974)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 9",
+	"Description": "Description 9",
+	"Id": 772,
+	"Isbn10": "Isbn10 9",
+	"Isbn13": "Isbn13 9",
+	"LocationString": "LocationString 9",
+	"PageCount": "PageCount 9",
+	"PrintType": "PrintType 9",
+	"PublishedDate": "PublishedDate 9",
+	"PublisherString": "PublisherString 9",
+	"Rating": 5476,
+	"SmallThumbnail": "10111111000010101110100101011101",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 9",
+	"Subtitle": "Subtitle 9",
+	"Thumbnail": "00101110100110000100000100110111",
+	"ThumbnailUrl": "ThumbnailUrl 9",
+	"Title": "Title 9",
+	"Version": "/Date(1500313903000)/",
+	"__metadata": {
+		"uri": "Books(772L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(772)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(772)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(772)/PublisherDetails"
+		}
+	}
+}, {
+	"AuthorsString": "AuthorsString 10",
+	"Description": "Description 10",
+	"Id": 6904,
+	"Isbn10": "Isbn10 10",
+	"Isbn13": "Isbn13 10",
+	"LocationString": "LocationString 10",
+	"PageCount": "PageCount 10",
+	"PrintType": "PrintType 10",
+	"PublishedDate": "PublishedDate 10",
+	"PublisherString": "PublisherString 10",
+	"Rating": 9723,
+	"SmallThumbnail": "01000101110011000111101101001110",
+	"SmallThumbnailUrl": "SmallThumbnailUrl 10",
+	"Subtitle": "Subtitle 10",
+	"Thumbnail": "11100101110110110011011110101100",
+	"ThumbnailUrl": "ThumbnailUrl 10",
+	"Title": "Title 10",
+	"Version": "/Date(1112464303000)/",
+	"__metadata": {
+		"uri": "Books(6904L)",
+		"type": "BooksDB.Book"
+	},
+	"AuthorDetails": {
+		"__deferred": {
+			"uri": "Books(6904)/AuthorDetails"
+		}
+	},
+	"LocationDetails": {
+		"__deferred": {
+			"uri": "Books(6904)/LocationDetails"
+		}
+	},
+	"PublisherDetails": {
+		"__deferred": {
+			"uri": "Books(6904)/PublisherDetails"
+		}
+	}
+}]

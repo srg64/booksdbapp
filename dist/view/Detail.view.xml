@@ -1,0 +1,116 @@
+<mvc:View controllerName="de.asr.library.booksdbapp.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
+	xmlns:semantic="sap.m.semantic" xmlns:footerbar="sap.ushell.ui.footerbar">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="{Title}">
+<!--
+				<firstStatus><ObjectStatus id="objectStatus1" text="{LocationString}" state="None"/></firstStatus>
+-->
+				<statuses><ObjectStatus id="objectStatus1" text="{LocationString}" state="None"/></statuses>
+				<attributes><ObjectAttribute id="objectAttribute1" text="{AuthorsString}"/><ObjectAttribute id="objectAttribute2" text="{Isbn13}"/></attributes>
+			</ObjectHeader>
+			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://picture" text="{i18n>detailIconTabBarCover}" tooltip="{i18n>detailIconTabBarCover}">
+						<content>
+							<Image src="{ThumbnailUrl}" tooltip="{i18n>coverImage}"/>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="iconTabBarFilter2" icon="sap-icon://notes" text="{i18n>detailIconTabBarText}" tooltip="{i18n>detailIconTabBarText}">
+						<content>
+							<VBox class="sapUiSmallMargin"><Text text="{Description}"/></VBox>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="iconTabBarFilter3" icon="sap-icon://list" text="{i18n>detailIconTabBarDetails}" tooltip="{i18n>detailIconTabBarDetails}">
+						<content>
+<!--
+class="editableForm" 
+editable="true" 
+-->
+			<f:SimpleForm columnsL="1" columnsM="1" editable="false" emptySpanL="4" emptySpanM="4" id="newDetailsSimpleForm"
+				labelSpanL="3" labelSpanM="3" layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024"
+				title="{= ${viewModel>/mode} === 'edit'? 'Edit BooksDB.Book': 'New BooksDB.Book'}">
+				<f:content>
+					<Label text="{i18n>Books.LocationString}" id="LocationStringLabel_id" required="false"/>
+					<Input name="LocationString" id="LocationString_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true"
+						visible="true" value="{ path: 'LocationString', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Title}" id="TitleLabel_id" required="false"/>
+					<Input name="Title" id="Title_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'Title', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Subtitle}" id="SubtitleLabel_id" required="false"/>
+					<Input name="Subtitle" id="Subtitle_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'Subtitle', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.AuthorsString}" id="AuthorsStringLabel_id" required="false"/>
+					<Input name="AuthorsString" id="AuthorsString_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'AuthorsString', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Description}" id="DescriptionLabel_id" required="false"/>
+					<Input name="Description" id="Description_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'Description', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:10000 } }"/>
+					<Label text="{i18n>Books.ThumbnailUrl}" id="ThumbnailUrlLabel_id" required="false"/>
+					<Input name="ThumbnailUrl" id="ThumbnailUrl_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'ThumbnailUrl', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.Isbn10}" id="Isbn10Label_id" required="false"/>
+					<Input name="Isbn10" id="Isbn10_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'Isbn10', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:10 } }"/>
+					<Label text="{i18n>Books.Isbn13}" id="Isbn13Label_id" required="false"/>
+					<Input name="Isbn13" id="Isbn13_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'Isbn13', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:13 } }"/>
+					<Label text="{i18n>Books.PageCount}" id="PageCountLabel_id" required="false"/>
+					<Input name="PageCount" id="PageCount_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'PageCount', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.PublishedDate}" id="PublishedDateLabel_id" required="false"/>
+					<Input name="PublishedDate" id="PublishedDate_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'PublishedDate', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="{i18n>Books.PublisherString}" id="PublisherStringLabel_id" required="false"/>
+					<Input name="PublisherString" id="PublisherString_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true"
+						visible="true" value="{ path: 'PublisherString', type: 'sap.ui.model.odata.type.String' }"/>
+<!--
+					<Label text="{i18n>Books.PrintType}" id="PrintTypeLabel_id" required="false"/>
+					<Input name="PrintType" id="PrintType_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'PrintType', type: 'sap.ui.model.odata.type.String' }"/>
+-->
+<!--
+					<Label text="{i18n>Books.Rating}" id="RatingLabel_id" required="false"/>
+					<Input name="Rating" id="Rating_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'Rating', type: 'sap.ui.model.odata.type.String' }"/>
+-->
+<!--
+					<Label text="{i18n>Books.SmallThumbnail}" id="SmallThumbnailLabel_id" required="false"/>
+					<Input name="SmallThumbnail" id="SmallThumbnail_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true"
+						visible="true" value="{ path: 'SmallThumbnail', type: 'sap.ui.model.odata.type.String' }"/>
+-->
+<!--
+					<Label text="{i18n>Books.SmallThumbnailUrl}" required="false"/>
+					<Input name="SmallThumbnailUrl" id="SmallThumbnailUrl_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true"
+						visible="true" value="{ path: 'SmallThumbnailUrl', type: 'sap.ui.model.odata.type.String' }"/>
+-->
+<!--
+					<Label text="{i18n>Books.Thumbnail}" required="false"/>
+					<Input name="Thumbnail" id="Thumbnail_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" editable="false" enabled="true" visible="true"
+						value="{ path: 'Thumbnail', type: 'sap.ui.model.odata.type.String' }"/>
+-->
+				</f:content>
+			</f:SimpleForm>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</semantic:content>
+		<semantic:editAction>
+			<semantic:EditAction id="edit" press="onEdit"/>
+		</semantic:editAction>
+		<semantic:customFooterContent>
+			<Button enabled="true" id="deleteButton" press="onDelete" text="Delete"/>
+		</semantic:customFooterContent>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		<semantic:shareInJamAction>
+			<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>
+		</semantic:shareInJamAction>
+		<semantic:saveAsTileAction>
+			<footerbar:AddBookmarkButton id="shareTile" title="{detailView>/saveAsTileTitle}"/>
+		</semantic:saveAsTileAction>
+	</semantic:DetailPage>
+</mvc:View>

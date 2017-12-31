@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices m:DataServiceVersion="1.0"
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <Schema Namespace="BooksDB"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Book">
+                <Key>
+                    <PropertyRef Name="Id"></PropertyRef>
+                </Key>
+                <Property Name="AuthorsString" Type="Edm.String"></Property>
+                <Property Name="Description" Type="Edm.String" Nullable="true" MaxLength="10000"></Property>
+                <Property Name="Id" Type="Edm.Int64" Nullable="false"></Property>
+                <Property Name="Isbn10" Type="Edm.String" Nullable="true" MaxLength="10"></Property>
+                <Property Name="Isbn13" Type="Edm.String" Nullable="true" MaxLength="13"></Property>
+                <Property Name="LocationString" Type="Edm.String"></Property>
+                <Property Name="PageCount" Type="Edm.String"></Property>
+                <Property Name="PrintType" Type="Edm.String"></Property>
+                <Property Name="PublishedDate" Type="Edm.String"></Property>
+                <Property Name="PublisherString" Type="Edm.String"></Property>
+                <Property Name="Rating" Type="Edm.Int64"></Property>
+                <Property Name="SmallThumbnail" Type="Edm.Binary"></Property>
+                <Property Name="SmallThumbnailUrl" Type="Edm.String"></Property>
+                <Property Name="Subtitle" Type="Edm.String"></Property>
+                <Property Name="Thumbnail" Type="Edm.Binary"></Property>
+                <Property Name="ThumbnailUrl" Type="Edm.String"></Property>
+                <Property Name="Title" Type="Edm.String"></Property>
+                <Property Name="Version" Type="Edm.DateTime"></Property>
+                <NavigationProperty Name="AuthorDetails" Relationship="BooksDB.Author_Book" FromRole="Book" ToRole="Author"></NavigationProperty>
+                <NavigationProperty Name="LocationDetails" Relationship="BooksDB.Book_Location" FromRole="Book" ToRole="Location"></NavigationProperty>
+                <NavigationProperty Name="PublisherDetails" Relationship="BooksDB.Book_Publisher" FromRole="Book" ToRole="Publisher"></NavigationProperty>
+            </EntityType>
+            <EntityType Name="Location">
+                <Key>
+                    <PropertyRef Name="Id"></PropertyRef>
+                </Key>
+                <Property Name="Id" Type="Edm.Int64" Nullable="false"></Property>
+                <Property Name="Name" Type="Edm.String"></Property>
+                <Property Name="Room" Type="Edm.String"></Property>
+                <Property Name="Shelf" Type="Edm.String"></Property>
+                <Property Name="Version" Type="Edm.DateTime"></Property>
+            </EntityType>
+            <EntityType Name="Publisher">
+                <Key>
+                    <PropertyRef Name="Id"></PropertyRef>
+                </Key>
+                <Property Name="Id" Type="Edm.Int64" Nullable="false"></Property>
+                <Property Name="Name" Type="Edm.String"></Property>
+                <Property Name="Version" Type="Edm.DateTime"></Property>
+            </EntityType>
+            <EntityType Name="Author">
+                <Key>
+                    <PropertyRef Name="Id"></PropertyRef>
+                </Key>
+                <Property Name="Id" Type="Edm.Int64" Nullable="false"></Property>
+                <Property Name="Name" Type="Edm.String"></Property>
+                <Property Name="Version" Type="Edm.DateTime"></Property>
+            </EntityType>
+            <Association Name="Book_Publisher">
+                <End Type="BooksDB.Book" Multiplicity="*" Role="Book"></End>
+                <End Type="BooksDB.Publisher" Multiplicity="1" Role="Publisher"></End>
+            </Association>
+            <Association Name="Book_Location">
+                <End Type="BooksDB.Book" Multiplicity="*" Role="Book"></End>
+                <End Type="BooksDB.Location" Multiplicity="1" Role="Location"></End>
+            </Association>
+            <Association Name="Author_Book">
+                <End Type="BooksDB.Book" Multiplicity="*" Role="Book"></End>
+                <End Type="BooksDB.Author" Multiplicity="*" Role="Author"></End>
+            </Association>
+            <EntityContainer Name="BooksDBContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Books" EntityType="BooksDB.Book"></EntitySet>
+                <EntitySet Name="Locations" EntityType="BooksDB.Location"></EntitySet>
+                <EntitySet Name="Publishers" EntityType="BooksDB.Publisher"></EntitySet>
+                <EntitySet Name="Authors" EntityType="BooksDB.Author"></EntitySet>
+                <AssociationSet Name="Book_PublisherSet" Association="BooksDB.Book_Publisher">
+                    <End EntitySet="Books" Role="Book"></End>
+                    <End EntitySet="Publishers" Role="Publisher"></End>
+                </AssociationSet>
+                <AssociationSet Name="Book_LocationSet" Association="BooksDB.Book_Location">
+                    <End EntitySet="Books" Role="Book"></End>
+                    <End EntitySet="Locations" Role="Location"></End>
+                </AssociationSet>
+                <AssociationSet Name="Author_BookSet" Association="BooksDB.Author_Book">
+                    <End EntitySet="Books" Role="Book"></End>
+                    <End EntitySet="Authors" Role="Author"></End>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

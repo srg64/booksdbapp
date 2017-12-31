@@ -1,0 +1,40 @@
+{
+  "run": [
+    {
+      "filePath": "/webapp/Component.js",
+      "previewMode": 1,
+      "dataMode": 0,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 9104474,
+        "runnerId": "fiorirunner",
+        "displayName": "FLP Sandbox (mocked)",
+        "lastRunTimeStamp": 1514734992946
+      }
+    },
+    {
+      "filePath": "/webapp/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 9563559,
+        "runnerId": "fiorirunner",
+        "displayName": "FLP Sandbox (real backend)",
+        "lastRunTimeStamp": 1514734929951
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+	"routes": [{
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/destinations/BooksDB",
+		"target": {
+			"type": "destination",
+			"name": "BooksDB"
+		},
+		"description": "OData access to the books data base"
+	}, {
+		"path": "/destinations/GoogleApi",
+		"target": {
+			"type": "destination",
+			"name": "GoogleApi",
+			"entryPath": "/"
+		},
+		"description": "Google APIs"
+	}],
+	"welcomeFile": "/test/flpSandbox.html",
+	"sendWelcomeFileRedirect": true,
+	"cacheControl": [{
+		"directive": "private",
+		"maxAge": 0,
+		"path": "*html"
+	}, {
+		"directive": "private",
+		"maxAge": 0,
+		"path": "sap-ui-cachebuster-info.json"
+	}, {
+		"directive": "public",
+		"maxAge": 31536000
+	}]
+}

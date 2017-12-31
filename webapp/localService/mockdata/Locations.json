@@ -1,0 +1,101 @@
+[{
+	"Id": 4972,
+	"Name": "Name 1",
+	"Room": "Room 1",
+	"Shelf": "Shelf 1",
+	"Version": "/Date(1095097906000)/",
+	"__metadata": {
+		"uri": "Locations(4972)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 4834,
+	"Name": "Name 2",
+	"Room": "Room 2",
+	"Shelf": "Shelf 2",
+	"Version": "/Date(1016995906000)/",
+	"__metadata": {
+		"uri": "Locations(4834)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 6915,
+	"Name": "Name 3",
+	"Room": "Room 3",
+	"Shelf": "Shelf 3",
+	"Version": "/Date(975091906000)/",
+	"__metadata": {
+		"uri": "Locations(6915)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 5858,
+	"Name": "Name 4",
+	"Room": "Room 4",
+	"Shelf": "Shelf 4",
+	"Version": "/Date(1311097906000)/",
+	"__metadata": {
+		"uri": "Locations(5858)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 2227,
+	"Name": "Name 5",
+	"Room": "Room 5",
+	"Shelf": "Shelf 5",
+	"Version": "/Date(1278957106000)/",
+	"__metadata": {
+		"uri": "Locations(2227)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 7776,
+	"Name": "Name 6",
+	"Room": "Room 6",
+	"Shelf": "Shelf 6",
+	"Version": "/Date(1469814706000)/",
+	"__metadata": {
+		"uri": "Locations(7776)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 8707,
+	"Name": "Name 7",
+	"Room": "Room 7",
+	"Shelf": "Shelf 7",
+	"Version": "/Date(1530035506000)/",
+	"__metadata": {
+		"uri": "Locations(8707)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 827,
+	"Name": "Name 8",
+	"Room": "Room 8",
+	"Shelf": "Shelf 8",
+	"Version": "/Date(1200336706000)/",
+	"__metadata": {
+		"uri": "Locations(827)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 7043,
+	"Name": "Name 9",
+	"Room": "Room 9",
+	"Shelf": "Shelf 9",
+	"Version": "/Date(1520103106000)/",
+	"__metadata": {
+		"uri": "Locations(7043)",
+		"type": "BooksDB.Location"
+	}
+}, {
+	"Id": 14,
+	"Name": "Name 10",
+	"Room": "Room 10",
+	"Shelf": "Shelf 10",
+	"Version": "/Date(990035506000)/",
+	"__metadata": {
+		"uri": "Locations(14)",
+		"type": "BooksDB.Location"
+	}
+}]
