@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+
+	<title>Books DB</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	
+	<script id="sap-ui-bootstrap"
+		src="https://sapui5.hana.ondemand.com/1.40.13/resources/sap-ui-core.js"
+		data-sap-ui-appCacheBuster="./"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-libs="sap.m,sap.ui.layout"
+		data-sap-ui-preload="async"
+		data-sap-ui-resourceroots='{"de.asr.library.booksdbapp": ""}'
+		data-sap-ui-theme="sap_belize" >
+	</script>
+<!--  
+		src="https://sapui5.hana.ondemand.com/1.38.8/resources/sap-ui-core.js"
+		src="/vaillant.com~ui5~common~ui~runtime~web/resources/sap-ui-cachebuster/sap-ui-core.js"
+		data-sap-ui-theme="sap_bluecrystal" >
+	<script id="sap-ui-bootstrap"
+		src="/vaillant.com~ui5~common~ui~runtime~web/resources/sap-ui-cachebuster/sap-ui-core.js"
+		data-sap-ui-appCacheBuster="./"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-libs="sap.m,sap.ui.layout"
+		data-sap-ui-preload="async"
+		data-sap-ui-resourceroots='{"vaillant.ui5.bpm.admintool": ""}'
+		data-sap-ui-theme="sap_bluecrystal" >
+	</script>
+	<script id="sap-ui-bootstrap"
+		src="../../resources/sap-ui-cachebuster/sap-ui-core.js"
+		data-sap-ui-appCacheBuster='./'
+		data-sap-ui-libs="sap.m, sap.ui.layout"
+		data-sap-ui-theme="sap_bluecrystal"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-resourceroots='{"vaillant.ui5.bpm.admintool": ""}'>
+	</script>
+	<script id='sap-ui-bootstrap' type='text/javascript'
+		src='/vaillant.com~ui5~common~ui~runtime~web/resources/sap-ui-cachebuster/sap-ui-core.js'
+		data-sap-ui-appCacheBuster='./'
+		data-sap-ui-theme='btexx_bluecrystal'
+		data-sap-ui-libs='sap.m, sap.ui.layout'
+		data-sap-ui-xx-bindingSyntax='complex'
+		data-sap-ui-resourceroots='{ "vaillant.ui5.bpm.admintool" : "./" }' >
+	</script>
+	<script id='sap-ui-bootstrap' type='text/javascript'
+		src='/vaillant.com~ui5~common~ui~runtime~web/openui5-runtime-1.26.07-mobile-only/sap-ui-core.js'
+		data-sap-ui-appCacheBuster='./'
+		data-sap-ui-theme='sap_bluecrystal'
+		data-sap-ui-libs='sap.m, sap.ui.layout'
+		data-sap-ui-xx-bindingSyntax='complex'
+		data-sap-ui-resourceroots='{ "vaillant.ui5.bpm.admintool" : "./" }' >
+	</script>
+	<script id='sap-ui-bootstrap' type='text/javascript'
+		src='/vaillant.com~ui5~common~ui~runtime~web/openui5-runtime-mobile-1.26.7/sap-ui-core.js'
+		data-sap-ui-appCacheBuster='./'
+		data-sap-ui-theme='sap_bluecrystal'
+		data-sap-ui-libs='sap.m, sap.ui.layout'
+		data-sap-ui-xx-bindingSyntax='complex'
+		data-sap-ui-resourceroots='{ "vaillant.ui5.bpm.admintool" : "./" }' >
+	</script>
+	<script id='sap-ui-bootstrap' type='text/javascript'
+		src='resources/sap-ui-core.js'
+		data-sap-ui-theme='sap_bluecrystal'
+		data-sap-ui-libs='sap.m, sap.ui.layout'
+		data-sap-ui-xx-bindingSyntax="complex"
+		data-sap-ui-resourceroots='{ "vaillant.ui5.bpm.admintool" : "./" }' >
+	</script>
+	<script id='sap-ui-bootstrap' type='text/javascript'
+		src='/vaillant.com~wf~prototypes~olingo~prototype~web/uptodate_sapui5_resources/sap-ui-core.js'
+		data-sap-ui-theme='sap_bluecrystal'
+		data-sap-ui-libs='sap.m, sap.ui.layout'
+		data-sap-ui-xx-bindingSyntax="complex"
+		data-sap-ui-resourceroots='{ "vaillant.ui5.bpm.admintool" : "./" }' >
+	</script>
+	<script id='sap-ui-bootstrap' type='text/javascript'
+		src='uptodate_sapui5_resources/resources/sap-ui-cachebuster/sap-ui-core.js'
+		data-sap-ui-appCacheBuster='./'
+		data-sap-ui-theme='sap_bluecrystal'
+		data-sap-ui-libs='sap.m, sap.ui.layout'
+		data-sap-ui-xx-bindingSyntax='complex'
+		data-sap-ui-resourceroots='{ "vaillant.ui5.bpm.admintool" : "./" }' >
+	</script>
+	<script id='sap-ui-bootstrap' type='text/javascript'
+		src='resources/sap-ui-cachebuster/sap-ui-core.js'
+		data-sap-ui-appCacheBuster='./'
+		data-sap-ui-theme='sap_bluecrystal'
+		data-sap-ui-libs='sap.m, sap.ui.layout'
+		data-sap-ui-xx-bindingSyntax='complex'
+		data-sap-ui-resourceroots='{ "vaillant.ui5.bpm.admintool" : "./" }' >
+	</script>
+	<script>
+		var liBehindFirstDot = location.hostname.indexOf( "." ) + 1;
+		if (liBehindFirstDot > 0) {
+			document.domain = location.hostname.substr( liBehindFirstDot );
+		}
+		sap.ui.getCore().attachInit(function() {
+			new sap.m.Shell({
+				app: new sap.ui.core.ComponentContainer({
+					height : "100%",
+					name : "vaillant.ui5.bpm.admintool"
+				}),
+				homeIcon : {
+					'phone' : 'img/57_iPhone_Desktop_Launch.png',
+					'phone@2' : 'img/114_iPhone-Retina_Web_Clip.png',
+					'tablet' : 'img/72_iPad_Desktop_Launch.png',
+					'tablet@2' : 'img/144_iPad_Retina_Web_Clip.png',
+					'favicon' : 'img/favicon.ico',
+					'precomposed': false
+				}
+			}).placeAt("content");
+		});
+	</script>
+	<script>
+		var liBehindFirstDot = location.hostname.indexOf( "." ) + 1;
+		if (liBehindFirstDot > 0) {
+			document.domain = location.hostname.substr( liBehindFirstDot );
+		}
+		sap.ui.getCore().attachInit(function() {
+			sap.ui.require([
+				"sap/ui/core/ComponentContainer"
+			], function(ComponentContainer) {
+				sap.ui.component({
+					async: true,
+					name: "vaillant.ui5.bpm.admintool"
+				}).then(function(yourComponent) {
+					new ComponentContainer({
+						component: yourComponent
+					}).placeAt("content");
+				});
+			});
+		});
+	</script>
+	<script>
+		var liBehindFirstDot = location.hostname.indexOf( "." ) + 1;
+		if (liBehindFirstDot > 0) {
+			document.domain = location.hostname.substr( liBehindFirstDot );
+		}
+		sap.ui.getCore().attachInit(function() {
+			new sap.m.Shell({
+				app: new sap.ui.core.ComponentContainer({
+					height : "100%",
+					name : "vaillant.ui5.bpm.admintool"
+				}),
+				homeIcon : {
+					'phone' : 'img/57_iPhone_Desktop_Launch.png',
+					'phone@2' : 'img/114_iPhone-Retina_Web_Clip.png',
+					'tablet' : 'img/72_iPad_Desktop_Launch.png',
+					'tablet@2' : 'img/144_iPad_Retina_Web_Clip.png',
+					'favicon' : 'img/favicon.ico',
+					'precomposed': false
+				}
+			}).placeAt("content");
+		});
+	</script>
+-->
+	<script>
+		var liBehindFirstDot = location.hostname.indexOf( "." ) + 1;
+		if (liBehindFirstDot > 0) {
+			document.domain = location.hostname.substr( liBehindFirstDot );
+		}
+		sap.ui.getCore().attachInit(function() {
+			sap.ui.require([
+				"sap/ui/core/ComponentContainer"
+			], function(ComponentContainer) {
+				sap.ui.component({
+					async: true,
+					name: "de.asr.library.booksdbapp"
+				}).then(function(yourComponent) {
+					new ComponentContainer({
+						component: yourComponent
+					}).placeAt("content");
+				});
+			});
+		});
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+</body>
+</html>
