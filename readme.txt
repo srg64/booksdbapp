@@ -1,5 +1,5 @@
 Working version of Books DB project.
-No longer maintained, because it is not in git.
+Maintained version, because it is in git!!!
 
 #### WELCOME ####
 
